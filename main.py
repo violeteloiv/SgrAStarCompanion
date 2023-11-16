@@ -4,6 +4,8 @@ import time
 
 from modules.iekl import *
 from modules.gw import *
+from modules.falling_in import *
+
 from modules.constants import *
 
 # Define The Range Of Masses
@@ -34,6 +36,41 @@ gravitational_wave_calculations(plt, masses, 2.5 * Conversion.MEGAYEARS_TO_YEARS
 {
 	"style": 'dashdot',
 	"color": "#444444"
+})
+
+# -- Inverse Eccentric Kozai-Loidav Mechanism Constraints -- #
+
+observing_objects = [
+	{
+		"parameters": {
+			"name": "S0-2",
+			"period": 16.0158, # years
+			"eccentricity": 0.88466,
+			"sm-axis": 970, # au
+		},
+		
+		"styling": {
+			"style": 'solid',
+			"color": '#FF0000'
+		}
+	}
+]
+
+for obj in observing_objects:
+	iekl_calculation(plt, masses, obj["parameters"], obj["styling"])
+
+# -- Constraints on Falling Into Sgr A* -- #
+
+falling_in_calculation(plt, masses, 0.4,
+{
+	"style": 'dashdot',
+	"color": "#b0d7e8"
+})
+
+falling_in_calculation(plt, masses, 0.8181,
+{
+	"style": 'solid',
+	"color": "#7bc9ea"
 })
 
 end = time.time()
