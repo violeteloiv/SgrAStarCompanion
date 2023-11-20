@@ -1,7 +1,5 @@
 from modules.constants import *
 
-import math
-
 def falling_in_calculation(plt, masses, eccentricity, plot_options):
 	minor_axis = SgrAttributes.SCHWARZSCHILD_RADIUS.value * (1 + eccentricity) / (1 - eccentricity)
 	
