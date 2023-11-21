@@ -61,12 +61,6 @@ for obj in observing_objects:
 
 # -- Constraints on Falling Into Sgr A* -- #
 
-falling_in_calculation(plt, masses, 0.4,
-{
-	"style": 'dashdot',
-	"color": "#b0d7e8"
-})
-
 falling_in_calculation(plt, masses, 0.8181,
 {
 	"style": 'solid',
