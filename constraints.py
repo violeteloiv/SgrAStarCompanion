@@ -32,10 +32,36 @@ gravitational_wave_calculations(plt, masses, 5.8 * Conversion.MEGAYEARS_TO_YEARS
 	'color': '#000000'
 })
 
-gravitational_wave_calculations(plt, masses, 2.5 * Conversion.MEGAYEARS_TO_YEARS.value,
+seps_in_au_gw = gravitational_wave_calculations(plt, masses, 2.5 * Conversion.MEGAYEARS_TO_YEARS.value,
 {
 	"style": 'dashdot',
 	"color": "#444444"
+})
+
+# calculate minimum eccentricity given constraints
+
+minimum = seps_in_au_gw[0]
+separation_ratio = 0.1 / minimum
+maximum_eccentricity = (1 - separation_ratio) / (1 + separation_ratio)
+
+# -- Constraints on Falling Into Sgr A* -- #
+
+falling_in_calculation(plt, masses, maximum_eccentricity,
+{
+	"style": 'solid',
+	"color": "#7bc9ea"
+})
+
+falling_in_calculation(plt, masses, 0.8,
+{
+	"style": 'solid',
+	"color": '#000000'
+})
+
+falling_in_calculation(plt, masses, 0.4,
+{
+	"style": 'solid',
+	"color": '#000000'
 })
 
 # -- Inverse Eccentric Kozai-Loidav Mechanism Constraints -- #
@@ -58,14 +84,6 @@ observing_objects = [
 
 for obj in observing_objects:
 	iekl_calculation(plt, masses, obj["parameters"], obj["styling"])
-
-# -- Constraints on Falling Into Sgr A* -- #
-
-falling_in_calculation(plt, masses, 0.8181,
-{
-	"style": 'solid',
-	"color": "#7bc9ea"
-})
 
 end = time.time()
 comp_time = end - start

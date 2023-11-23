@@ -6,6 +6,8 @@ from modules.constants import *
 # masses = au
 # time = years
 # plots a graph on the solar mass vs. au plot.
+# 
+# returns the semi-major axis array
 def gravitational_wave_calculations(plt, masses, time, plot_options):
 	# convert masses into kilograms for calculations.
 	proxy_masses = masses * Conversion.SOLAR_MASS_TO_KILOGRAMS.value
@@ -27,3 +29,5 @@ def gravitational_wave_calculations(plt, masses, time, plot_options):
 		linestyle=plot_options["style"], 
 		color=plot_options["color"]
 	)
+
+	return separations # in au

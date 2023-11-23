@@ -8,6 +8,8 @@ import numpy as np
 #    - Eccentricity (unitless)
 #    - Semi-Major Axis (au)
 def iekl_calculation(plt, masses, orbital_parameters, plot_options):
+	# calculate iEKL time scale parameters
+
 	# base conversions
 	orbit_period = orbital_parameters["period"] * Conversion.YEARS_TO_SECONDS.value
 
@@ -19,6 +21,8 @@ def iekl_calculation(plt, masses, orbital_parameters, plot_options):
 	summed_masses_squared = np.power(masses + SgrAttributes.MASS.value, 2)
 	mass_terms = summed_masses_squared / (masses * SgrAttributes.MASS.value)
 	print(mass_terms)
+
+	# calculate general relativistic precession parameters
 
 	
 
