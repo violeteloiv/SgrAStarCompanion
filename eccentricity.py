@@ -5,13 +5,13 @@ import time
 from modules.constants import *
 
 # Define The Range Of Masses
-separations = np.arange(1e-1, 1e8, 1)
+separations = np.arange(1e-1, 1e2, 1)
 
 # Define the plot itself.
 plt.title("Constraints on Sgr A* Companion Eccentricity")
 plt.xlabel("$a_c$ $[au]$")
 plt.ylabel("$e$")
-plt.axis([1e-1, 1e5, 0, 1.1])
+plt.axis([1e-1, 1e2, 0, 1.05])
 
 # Make the axes log scale.
 plt.semilogx()

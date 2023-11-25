@@ -38,32 +38,6 @@ seps_in_au_gw = gravitational_wave_calculations(plt, masses, 2.5 * Conversion.ME
 	"color": "#444444"
 })
 
-# calculate minimum eccentricity given constraints
-
-minimum = seps_in_au_gw[0]
-separation_ratio = 0.1 / minimum
-maximum_eccentricity = (1 - separation_ratio) / (1 + separation_ratio)
-
-# -- Constraints on Falling Into Sgr A* -- #
-
-falling_in_calculation(plt, masses, maximum_eccentricity,
-{
-	"style": 'solid',
-	"color": "#7bc9ea"
-})
-
-falling_in_calculation(plt, masses, 0.8,
-{
-	"style": 'solid',
-	"color": '#000000'
-})
-
-falling_in_calculation(plt, masses, 0.4,
-{
-	"style": 'solid',
-	"color": '#000000'
-})
-
 # -- Inverse Eccentric Kozai-Loidav Mechanism Constraints -- #
 
 observing_objects = [
