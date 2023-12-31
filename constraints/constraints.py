@@ -51,7 +51,7 @@ observing_objects = [
 		
 		"styling": {
 			"style": 'solid',
-			"color": '#FF0000'
+			"color": '#FF9999'
 		}
 	}
 ]
