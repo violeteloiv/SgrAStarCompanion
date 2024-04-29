@@ -46,7 +46,7 @@ observing_objects = [
 			"name": "S0-2",
 			"period": 16.0158, # years
 			"eccentricity": 0.88466,
-			"sm-axis": 970, # au
+			"sm-axis": 970, # 1020, # au
 		},
 		
 		"styling": {
@@ -58,6 +58,8 @@ observing_objects = [
 
 for obj in observing_objects:
 	iekl_calculation(plt, masses, obj["parameters"], obj["styling"])
+
+print("----------------------------------")
 
 end = time.time()
 comp_time = end - start

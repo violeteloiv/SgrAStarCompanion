@@ -24,6 +24,8 @@ def gravitational_wave_calculations(plt, masses, time, plot_options):
 	# finally computer the separations and convert it to AUs.
 	separations = np.power(mass_terms * time_over_constant, 1/4)  * Conversion.METERS_TO_AU.value
 
+	# plt.fill(masses, separations, facecolor="black", alpha=0.5)
+
 	plt.plot(masses, separations, 
 		label="$t_{GW}$="+str(time * Conversion.YEARS_TO_MEGAYEARS.value)+"Myrs", 
 		linestyle=plot_options["style"], 

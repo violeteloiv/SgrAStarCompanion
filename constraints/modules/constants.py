@@ -24,5 +24,5 @@ class Fundamental(Enum):
 class SgrAttributes(Enum):
 	MASS = 4.297e6 * Conversion.SOLAR_MASS_TO_KILOGRAMS.value # kilograms
 	SCHWARZSCHILD_RADIUS = 0.1 * Conversion.AU_TO_METERS.value # meters 
-	COMPANION_ECCENTRICITY = 0.5
+	COMPANION_ECCENTRICITY = 0.2
 
