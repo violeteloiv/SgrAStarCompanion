@@ -51,7 +51,7 @@ observing_objects = [
 		
 		"styling": {
 			"style": 'solid',
-			"color": '#FF9999'
+			"color": '#FFAAAA'
 		}
 	},
 	{
@@ -64,7 +64,7 @@ observing_objects = [
 		
 		"styling": {
 			"style": 'solid',
-			"color": '#FF6666'
+			"color": '#FF7777'
 		}
 	},
 	{
@@ -77,7 +77,7 @@ observing_objects = [
 		
 		"styling": {
 			"style": 'solid',
-			"color": '#FF3333'
+			"color": '#FF1111'
 		}
 	}
 ]

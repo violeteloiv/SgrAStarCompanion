@@ -26,8 +26,8 @@ def iekl_calculation(plt, masses, orbital_parameters, plot_options):
 
 	result_raw = np.power(iekl_const * precession_bottom / precession_top,  2/9)
 	result = result_raw * Conversion.METERS_TO_AU.value
-	print(result)
 
+	plt.fill_between(masses, result, 10e5, color=plot_options["color"], alpha=0.1)
 	plt.plot(masses, result, 
 		label="$t_{iEKL} \\sim t_{GR}$ (%s)" % orbital_parameters["name"], 
 		linestyle=plot_options["style"], 
