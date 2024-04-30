@@ -13,7 +13,7 @@ masses = np.arange(1e-2, 1e8, 1e1)
 
 # Define the plot itself.
 plt.title("Constraints on Sgr A* Companion")
-plt.xlabel("$m_c$ $[M_\odot]$")
+plt.xlabel("$m_c$ $[M_\\odot]$")
 plt.ylabel("$a_c$ [au]")
 plt.axis([1e-2, 1e8, 1e-1, 1e5])
 
@@ -52,6 +52,32 @@ observing_objects = [
 		"styling": {
 			"style": 'solid',
 			"color": '#FF9999'
+		}
+	},
+	{
+		"parameters": {
+			"name": "S0-102",
+			"period": 12.8, # years
+			"eccentricity": 0.721,
+			"sm-axis": 881, # 1020, # au
+		},
+		
+		"styling": {
+			"style": 'solid',
+			"color": '#FF6666'
+		}
+	},
+	{
+		"parameters": {
+			"name": "S62",
+			"period": 9.9, # years
+			"eccentricity": 0.976,
+			"sm-axis": 740, # 1020, # au
+		},
+		
+		"styling": {
+			"style": 'solid',
+			"color": '#FF3333'
 		}
 	}
 ]

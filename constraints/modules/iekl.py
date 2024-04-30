@@ -29,7 +29,7 @@ def iekl_calculation(plt, masses, orbital_parameters, plot_options):
 	print(result)
 
 	plt.plot(masses, result, 
-		label="$t_{iEKL} \sim t_{GR}$", 
+		label="$t_{iEKL} \\sim t_{GR}$ (%s)" % orbital_parameters["name"], 
 		linestyle=plot_options["style"], 
 		color=plot_options["color"]
 	)
